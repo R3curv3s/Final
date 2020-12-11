@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Alpha_Controller">
+  <children>
+    <AnchorPane fx:id="login" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="192.0" layoutY="67.0" style="&#10;" textAlignment="CENTER" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+        </Label>
+            <Label alignment="CENTER" layoutX="228.0" layoutY="19.0" style="&#10;" text="Registration" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Label>
+            <VBox layoutX="201.0" layoutY="102.0" prefHeight="276.0" prefWidth="244.0">
+               <children>
+                  <TextField fx:id="tfNewUserName" onAction="#tfNewUserName" prefHeight="30.0" prefWidth="244.0" promptText="Username" />
+                  <TextField fx:id="tfFirstName" onAction="#tfFirstName" prefHeight="30.0" prefWidth="244.0" promptText="First Name" />
+                  <TextField fx:id="tfLastName" onAction="#tfLastName" prefHeight="30.0" prefWidth="244.0" promptText="Last Name" />
+                  <TextField fx:id="tfEmail" onAction="#tfEmail" prefHeight="30.0" prefWidth="244.0" promptText="You can use letters,numbers &amp; periods" />
+                  <PasswordField fx:id="pfNewUserPassword" onAction="#pfNewUserPassword" promptText="+8 character mix of letters and numbes" />
+                  <PasswordField fx:id="tfNewUserConfirmPassword" onAction="#tfNewUserConfirmPassword" promptText="+8 character mix of letters and numbes" />
+                  <CheckBox fx:id="cbMale" mnemonicParsing="false" text="Male" />
+                  <CheckBox fx:id="cbFemale" mnemonicParsing="false" text="Female" />
+               </children>
+            </VBox>
+            <VBox layoutX="87.0" layoutY="102.0" prefHeight="276.0" prefWidth="114.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="125.0" text="Username" />
+                  <Label prefHeight="30.0" prefWidth="125.0" text="First Name:" />
+                  <Label prefHeight="30.0" prefWidth="125.0" text="Last Name:" />
+                  <Label prefHeight="30.0" prefWidth="125.0" text="Email Address:" />
+                  <Label prefHeight="30.0" prefWidth="125.0" text="Password:" />
+                  <Label prefHeight="30.0" prefWidth="117.0" text="Confirm Password:" />
+               </children>
+            </VBox>
+            <Button fx:id="btCancelSignup" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#btCancelSignup" text="Cancel" />
+            <Label layoutY="72.0" prefHeight="18.0" prefWidth="640.0" />
+            <Button fx:id="btCreateAccount" layoutX="293.0" layoutY="295.0" mnemonicParsing="false" onAction="#btCreateAccount" text="Create" />
+            <ImageView fitHeight="143.0" fitWidth="185.0" layoutX="497.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Downloads/fazi-d-o-o-triple-crown-company-user-computer-icons-png-favpng-jgrStZRSJSJfdQPnD9wqQHfaM_t-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-39.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Downloads/gear-icon-png-favpng-Q8gSZg0j3LaspV53G55AMkDyy-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#070707" height="12.0" layoutX="-3.0" stroke="BLACK" strokeType="INSIDE" width="646.0" AnchorPane.bottomAnchor="387.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label fx:id="lbPasswordMismatch" layoutX="261.0" layoutY="340.0" text="Password Mismatch!" textFill="RED" visible="false" />
+            <Label fx:id="lbUsernameExists" layoutX="245.0" layoutY="340.0" text="Username Already Exists!" textFill="RED" visible="false" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

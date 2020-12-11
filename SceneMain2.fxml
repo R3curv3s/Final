@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Alpha_Controller">
+  <children>
+    <AnchorPane fx:id="mainPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="184.0" layoutY="67.0" style="&#10;" text="ENTER CREDENTIALS FOR ACCESS" textAlignment="CENTER" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+        </Label>
+            <Label alignment="CENTER" layoutX="152.0" layoutY="14.0" style="&#10;" text="SECURITY DATABASE" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Label>
+            <PasswordField fx:id="pfPassword" layoutX="246.0" layoutY="234.0" promptText="Password" />
+            <TextField fx:id="tfUsername" layoutX="246.0" layoutY="187.0" promptText="Username" />
+            <Label fx:id="lbPassword" layoutX="179.0" layoutY="238.0" text="Password:" />
+            <Label fx:id="lbUsername" layoutX="178.0" layoutY="192.0" text="Username:" />
+            <ButtonBar layoutX="200.0" layoutY="275.0" prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                <Button fx:id="Validate" mnemonicParsing="false" onAction="#btValidate" text="Login" />
+                  <Button fx:id="cancel" mnemonicParsing="false" onAction="#btCancel" text="Reset" />
+              </buttons>
+            </ButtonBar>
+            <Button fx:id="btRegister" layoutX="14.0" layoutY="354.0" mnemonicParsing="false" onAction="#btRegister" text="Register" />
+            <Label fx:id="lbIncorrect" layoutX="261.0" layoutY="271.0" text="Incorrect Password!" textFill="RED" visible="false" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Downloads/computer-security-internet-computer-software-service-png-favpng-fSdrk8ktX5fMqBJe4wPvRP7jx_t-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="488.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Downloads/lock-ransomware-computer-icons-png-favpng-h3XF7VJbRtnm8Z8WyqFz8Wvip_t-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="help" layoutX="83.0" layoutY="354.0" mnemonicParsing="false" onAction="#Help" text="Help" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
